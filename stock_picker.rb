@@ -3,9 +3,9 @@ def stock_picker(stocks)
   stocks.each_with_index do |value,index|
     for i in index+1.. stocks.size-1 do
       if result.nil?
-        result = stocks[i] - value
-      elsif (temp = stocks[i] - value) > result
-        result = temp
+        result = [index,i]
+      elsif (stocks[i] - value) > stocks[result[1]] - stocks[result[0]]
+        result = [index,i]
       end 
     end
   end
