@@ -11,8 +11,3 @@ def caesar_cipher(string, shift)
     end
   end.join
 end
-
-puts 'Input your string : '
-user_input = gets.chomp
-puts 'Input the number of shifts : '
-puts caesar_cipher(user_input, gets.chomp.to_i)
